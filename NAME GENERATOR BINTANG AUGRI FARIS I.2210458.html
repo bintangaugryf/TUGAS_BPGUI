@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1 {
+      text-transform: uppercase;
+      color: red;
+      font-family: Arial, sans-serif;
+      text-decoration: underline;
+    }
+
+    p {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 24px;
+      color: purple;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+      font-family: "Arial Black", sans-serif;
+      font-size: 20px;
+      color: white;
+      background-color: #ff8c00;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff6b00;
+    }
+
+    .universitas {
+      font-family: "Arial Black", sans-serif;
+      font-size: 30px;
+      color: #ffd700;
+      text-align: center;
+      margin-top: 20px;
+      border-top: 2px solid #000;
+      padding-top: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer {
+      font-family: "Arial Black", sans-serif;
+      font-size: 24px;
+      color: #ffd700;
+      text-align: center;
+      margin-top: 50px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+  <script type="text/javascript">
+    var names = {
+      a: ["Alice", "Alex", "Anna", "Aaron", "Amy", "Adam", "Abigail", "Andrew", "Ava", "Austin"],
+      b: ["Bob", "Bella", "Benjamin", "Brianna", "Brandon", "Brooklyn", "Blake", "Bailey", "Bryan", "Bethany"],
+      c: ["Charlie", "Chloe", "Caleb", "Catherine", "Christian", "Claire", "Cameron", "Caroline", "Colin", "Courtney"],
+      d: ["Daniel", "Daisy", "David", "Diana", "Dylan", "Delilah", "Dominic", "Danielle", "Derek", "Destiny"],
+      e: ["Ethan", "Emily", "Elijah", "Emma", "Evan", "Ella", "Eric", "Eliza", "Ezra", "Evelyn"],
+      f: ["Frank", "Faith", "Finn", "Fiona", "Frederick", "Felicity", "Finley", "Francesca", "Flynn", "Fiona"],
+      g: ["Gabriel", "Grace", "Gavin", "Giselle", "Grayson", "Gianna", "George", "Genevieve", "Graham", "Gemma"],
+      h: ["Henry", "Hannah", "Harrison", "Harper", "Hudson", "Hazel", "Holden", "Heidi", "Hugo", "Hailey"],
+      i: ["Isaac", "Isabella", "Ian", "Ivy", "Ivan", "Isabel", "Igor", "Iris", "Israel", "Imogen"],
+      j: ["Jacob", "Jessica", "Jackson", "Julia", "James", "Jasmine", "John", "Josephine", "Jonathan", "Jade"],
+      k: ["Kevin", "Kayla", "Kaleb", "Kylie", "Kyle", "Katherine", "Kingston", "Kennedy", "Keegan", "Kelsey"],
+      l: ["Liam", "Lily", "Lucas", "Leah", "Logan", "Layla", "Leo", "Luna", "Landon", "Lila"],
+      m: ["Mason", "Mia", "Matthew", "Madison", "Max", "Maya", "Michael", "Mila", "Miles", "Molly"],
+      n: ["Noah", "Natalie", "Nathan", "Nora", "Nicholas", "Naomi", "Nolan", "Nadia", "Nathaniel", "Nina"],
+      o: ["Oliver", "Olivia", "Owen", "Ophelia", "Oscar", "Octavia", "Orion", "Odette", "Omar", "Olive"],
+      p: ["Parker", "Penelope", "Patrick", "Paisley", "Peter", "Phoebe", "Preston", "Piper", "Philip", "Poppy"],
+      q: ["Quentin", "Quinn", "Quincy", "Queenie", "Quinton", "Quinlan", "Quiana", "Quest", "Quetzal", "Quanda"],
+      r: ["Ryan", "Rachel", "Robert", "Rebecca", "Riley", "Rose", "Roman", "Ruby", "Rowan", "Rylee"],
+      s: ["Samuel", "Sophia", "Sebastian", "Sarah", "Simon", "Scarlett", "Sawyer", "Sadie", "Seth", "Stella"],
+      t: ["Thomas", "Taylor", "Theodore", "Tessa", "Tristan", "Victoria", "Trevor", "Violet", "Tyler", "Valerie"],
+      u: ["Ulysses", "Uma", "Uriah", "Unity", "Upton", "Ursula", "Urban", "Umberto", "Ulric", "Una"],
+      v: ["Vincent", "Vanessa", "Victor", "Vivian", "Vaughn", "Veronica", "Vance", "Valentina", "Viggo", "Viola"],
+      w: ["William", "Willow", "Wesley", "Willa", "Wyatt", "Wren", "Walter", "Winona", "Winston", "Wendy"],
+      x: ["Xavier", "Xena", "Xander", "Xiomara", "Xander", "Xenia", "Xavi", "Xanthe", "Xerxes", "Xandra"],
+      y: ["Yosef", "Yara", "Yohan", "Yasmin", "Yuri", "Yvette", "Yardley", "Yara", "Yael", "Yolanda"],
+      z: ["Zachary", "Zoe", "Zane", "Zara", "Zachariah", "Zelda", "Zander", "Zahra", "Zeke", "Zoey"]
+    };
+
+    function generateName() {
+      var lettersInput = document.getElementById("letters");
+      var letters = lettersInput.value.toLowerCase();
+
+      var nameOutput = document.getElementById("name");
+      nameOutput.innerHTML = "";
+
+      for (var i = 0; i < letters.length; i++) {
+        var letter = letters[i];
+        var namesForLetter = names[letter];
+
+        if (namesForLetter) {
+          var randomIndex = Math.floor(Math.random() * namesForLetter.length);
+          var randomName = namesForLetter[randomIndex];
+          nameOutput.innerHTML += randomName + "<br>";
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1><marquee behavior="scroll" direction="left"><u><span style="color: red; text-decoration: underline;">TUGAS BAHASA PEMROGRAMAN GUI</span></u> - NAME GENERATOR 2023</marquee></h1>
+  <p><em><span style="text-decoration: underline; color: purple; font-weight: bold;">NAMA: BINTANG AUGRI FARIS // NIM: I.2210458</span></em></p>
+  
+  <label for="letters">Pilih Huruf: </label>
+  <input type="text" id="letters" placeholder="Contoh: abcdef" /><br>
+  <button onclick="generateName()">Generate Nama</button>
+  <p id="name"></p>
+  
+  <div class="universitas">UNIVERSITAS DJUANDA</div>
+</body>
+</html>
